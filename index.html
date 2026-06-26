@@ -8,5 +8,47 @@
     <title>PollyGlot AI translate app</title>
     <link rel="stylesheet" href="style.css">
     </head>
-<body></body>
-</html>
+    <body>
+        <header>
+
+        <img src="logo.png" alt="logo">
+
+        <div>
+            <h1>PollyGlot</h1>
+            <p>Perfect Translation Every Time</p>
+            </div>
+        </header>
+        <main>
+        <form>
+        <label for="input-text">Text to translate</label>
+        <textarea
+            id="input-text"
+            placeholder="How are you?"
+            required
+        ></textarea>
+
+        <h2>Select language</h2>
+
+        <label>
+            <input type="radio" name="language" value="french" required>
+            French
+            <img src="france-flag.png" alt="France flag">
+        </label>
+
+        <label>
+            <input type="radio" name="language" value="spanish">
+            Spanish
+            <img src="spain-flag.png" alt="Spain flag">
+        </label>
+
+        <label>
+            <input type="radio" name="language" value="japanese">
+            Japanese
+            <img src="japan-flag.png" alt="Japan flag">
+        </label>
+
+        <button type="submit">Translate</button>
+    </form>
+    </main>
+    </body>
+    </html>
