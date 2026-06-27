@@ -5,7 +5,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "vite build"
   },
   "repository": {
     "type": "git",
@@ -21,5 +22,8 @@
   "dependencies": {
     "dotenv": "^17.4.2",
     "openai": "^6.45.0"
+  },
+  "devDependencies": {
+    "vite": "^8.1.0"
   }
 }

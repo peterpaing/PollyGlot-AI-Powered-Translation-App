@@ -1,10 +1,10 @@
 import OpenAI from "openai"
-import 'dotenv/config'
+
 
 const inputEl = document.getElementById('input-text')
 
 const openai = new OpenAI({
-    apiKey: process.env.GROQ_API_KEY,
+    apiKey: import.meta.env.VITE_GROQ_API_KEY,
     baseURL: "https://api.groq.com/openai/v1",
     dangerouslyAllowBrowser: true
 })
@@ -14,6 +14,10 @@ document.querySelector('form').addEventListener('submit', async function(e){
 
     const checkedRadio = document.querySelector('input[name="language"]:checked')
     const messages = [
+        {
+            role:"system",
+            content:`You are a professional translator. Translate the user's text into ${checkedRadio.value}. Return only the translation. Keep the meaning accurate and natural. Do not add explanations, notes, or extra text.`
+        },
         {
             role: "user",
             content: inputEl.value
