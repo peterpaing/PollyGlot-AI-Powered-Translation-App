@@ -4,7 +4,8 @@ import OpenAI from "openai"
 
 const openai = new OpenAI({
     apiKey:"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",
-    baseURL:"https://api.groq.com/openai/v1"
+    baseURL:"https://api.groq.com/openai/v1",
+    dangerouslyAllowBrowser: true
 })
 
 const messages=[
