@@ -2,7 +2,6 @@ import OpenAI from "openai"
 import 'dotenv/config'
 
 const inputEl = document.getElementById('input-text')
-const radioEl = document.querySelector('.radio-select')
 
 const openai = new OpenAI({
     apiKey: process.env.GROQ_API_KEY,
@@ -13,7 +12,7 @@ const openai = new OpenAI({
 document.querySelector('form').addEventListener('submit', async function(e){
     e.preventDefault()
 
-    
+    const checkedRadio = document.querySelector('input[name="language"]:checked')
     const messages = [
         {
             role: "user",
@@ -21,7 +20,8 @@ document.querySelector('form').addEventListener('submit', async function(e){
         }
     ]
 
-    if(inputEl.value && radioEl.value){
+    
+    if(inputEl.value && checkedRadio){
         try {
             
             const response = await openai.chat.completions.create({
