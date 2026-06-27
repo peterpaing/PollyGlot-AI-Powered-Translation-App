@@ -113,7 +113,7 @@ textarea:focus{
 button{
     width: 88.95%;
     display: block;
-    margin:46px auto;
+    margin:40px auto 20px auto;
     padding: 14px;
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
