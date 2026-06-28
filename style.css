@@ -112,7 +112,7 @@ textarea:focus{
 .translated-text{
     display: '';
 }
-.submit-btn{
+.submit-btn,.reset-btn{
     width: 88.95%;
     display: block;
     margin:40px auto 20px auto;
@@ -125,5 +125,17 @@ textarea:focus{
     color: #FFFFFF;
     border: none;
     border-radius: 6px;
+}
+
+.reset-btn{
+    display: none;
+}
+
+.translated{
+    width: 81.28%;
+    border-radius: 8px;
+    background-color: #EFF0F4;
+    padding: 12px 5px 100px 10px;
+    margin: auto;
 }
 

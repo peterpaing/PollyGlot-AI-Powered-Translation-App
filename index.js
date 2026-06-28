@@ -2,7 +2,9 @@ import OpenAI from "openai"
 
 const inputEl = document.getElementById('input-text')
 const translatedText = document.querySelector('.translated-text')
+const selectLanguage = document.querySelector('.select-language')
 const submitEl= document.querySelector('.submit-btn')
+const resetEl= document.querySelector('.reset-btn')
 
 
 const openai = new OpenAI({
@@ -56,8 +58,10 @@ Requirements:
             })
 
           const translate= response.choices[0].message.content
+          selectLanguage.style.display='none'
+          submitEl.style.display='none'
+          resetEl.style.display='block'
           translatedText.innerHTML = render(translate)
-          submitEl.textContent=`Start Over`
 
 
         } catch (error) {
@@ -68,6 +72,15 @@ Requirements:
 
 function render(message){
     return `<h2>Your translation</h2>
-            <div>${message}</div>
+            <div class="translated">${message}</div>
             `
 }
+
+document.querySelector('form').addEventListener('reset', function(e){
+    e.preventDefault()
+
+    selectLanguage.style.display='block'
+          submitEl.style.display='block'
+          resetEl.style.display='none'
+          translatedText.style.display='none'
+})
