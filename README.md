@@ -25,6 +25,10 @@ An AI-powered translation web application that translates user input into multip
 * OpenAI SDK
 * AI Language Model API
 
+## Pre-view
+
+![mobile-preview](/images/mobile-preview.png)
+
 ## Project Structure
 
 ```
