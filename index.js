@@ -1,7 +1,9 @@
 import OpenAI from "openai"
 
-
 const inputEl = document.getElementById('input-text')
+const translatedText = document.querySelector('.translated-text')
+const submitEl= document.querySelector('.submit-btn')
+
 
 const openai = new OpenAI({
     apiKey: import.meta.env.VITE_GROQ_API_KEY,
@@ -52,10 +54,20 @@ Requirements:
                 model: "openai/gpt-oss-20b", 
                 messages: messages 
             })
-            
-            console.log(response.choices[0].message.content)
+
+          const translate= response.choices[0].message.content
+          translatedText.innerHTML = render(translate)
+          submitEl.textContent=`Start Over`
+
+
         } catch (error) {
             console.error("API Error:", error)
         }
     }
 })
+
+function render(message){
+    return `<h2>Your translation</h2>
+            <div>${message}</div>
+            `
+}

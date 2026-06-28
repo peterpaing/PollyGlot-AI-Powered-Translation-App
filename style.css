@@ -109,8 +109,10 @@ textarea:focus{
     margin-left: 45px;
     margin-bottom: 15px;
 }
-
-button{
+.translated-text{
+    display: '';
+}
+.submit-btn{
     width: 88.95%;
     display: block;
     margin:40px auto 20px auto;
