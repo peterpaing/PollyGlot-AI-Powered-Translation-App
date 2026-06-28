@@ -42,20 +42,20 @@ header h1{
     font-family: "Big Shoulders", sans-serif;
     color: #32CD32;
     font-weight: 800;
-    font-size: 43.42px;
+    font-size: 2.714rem; /* 43.42px */
     line-height: 150%;
 }
 
 header p{
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
-    font-size: 12.21px;
+    font-size: 0.763rem; /* 12.21px */
     line-height: 150%;
     color: #FFFFFF;
 }
 
 form{
-    margin: 30px 15px;
+    margin: 1.875em 0.9375em; /* 30px 15px */
     border: 4px solid #252F42;
     border-radius: 15px;
 }
@@ -64,22 +64,24 @@ form{
 #input-text{
     display: block;
     font-family: 'Poppins', sans-serif;
-    font-size: 20px;
+    font-size: 1.25rem; /* 20px */
     line-height: 150%;
 }
 
 form h2{
-    margin: 24px 0;
+    margin: 1em 0; 
     text-align: center;
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
-    text-align: center;
     color: #035A9D;
 }
+
 #input-text{
- padding: 12px 5px 76px 10px;
+    padding: 0.6em 0.25em 3.8em 0.5em; /* 12px 5px 76px 10px */
 }
-#input-text,.translated{
+
+#input-text,
+.translated{
     resize: none;
     width: 81.28%;
     border: none;
@@ -87,13 +89,15 @@ form h2{
     background-color: #EFF0F4;
     margin: auto;
 }
+
 .translated{
-    padding: 12px 5px 85px 10px;
-     display: flex;
+    padding: 0.667em 0.278em 4.722em 0.556em; /* 12px 5px 85px 10px */
+    display: flex;
     color:#000;
-    font-size: 18px;
+    font-size: 1.125rem; /* 18px */
     font-family: 'Poppins', sans-serif;
 }
+
 textarea::placeholder{
     color:#333333;
 }
@@ -112,9 +116,9 @@ textarea:focus{
     gap: 12px;
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
-    font-size: 20px;
-    margin-left: 45px;
-    margin-bottom: 15px;
+    font-size: 1.25rem; /* 20px */
+    margin-left: 2.25em; /* 45px */
+    margin-bottom: 0.75em; /* 15px */
 }
 
 input[type="radio"]{
@@ -124,14 +128,16 @@ input[type="radio"]{
 .translated-text{
     display: '';
 }
-.submit-btn,.reset-btn{
+
+.submit-btn,
+.reset-btn{
     width: 88.95%;
     display: block;
-    margin:40px auto 20px auto;
-    padding: 14px;
+    margin: 1.667em auto 0.833em auto; /* 40px auto 20px auto */
+    padding: 0.583em; /* 14px */
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
-    font-size: 24px;
+    font-size: 1.5rem; /* 24px */
     text-align: center;
     background-color: #035A9D;
     color: #FFFFFF;
@@ -139,8 +145,10 @@ input[type="radio"]{
     border-radius: 6px;
 }
 
-.submit-btn:hover,.submit-btn:focus
-,.reset-btn:hover,.reset-btn:focus{
+.submit-btn:hover,
+.submit-btn:focus,
+.reset-btn:hover,
+.reset-btn:focus{
     background-color:#0475CC;
 }
 
@@ -152,32 +160,28 @@ input[type="radio"]{
     header{
         height: 15%;
         gap:50px;
-        padding-top: 20px;
-        padding-bottom: 20px;
+        padding-top: 1.25em; /* 20px */
+        padding-bottom: 1.25em; /* 20px */
     }
 
     header img{
         width: 80px;
         height:80px;
     }
+
     form{
-        margin-top: 20px;
+        margin-top: 1.25em; /* 20px */
     }
 
     .raido-label{
-        margin-left: 110px;
+        margin-left: 5.5em; /* 110px */
     }
 
     #input-text{
-        padding: 12px 5px 55px 10px;
+        padding: 0.6em 0.25em 2.75em 0.5em; /* 12px 5px 55px 10px */
     }
 
     .translated{
-       padding: 12px 5px 85px 10px; 
+        padding: 0.667em 0.278em 4.722em 0.556em; /* 12px 5px 85px 10px */
     }
 }
-
-
-
-
-
