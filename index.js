@@ -9,7 +9,7 @@ const resetEl= document.querySelector('.reset-btn')
 
 const openai = new OpenAI({
     apiKey: import.meta.env.VITE_GROQ_API_KEY,
-    baseURL: "https://api.groq.com/openai/v1",
+    baseURL: "https://api.openai.com/v1",
     dangerouslyAllowBrowser: true
 })
 
@@ -20,27 +20,7 @@ document.querySelector('form').addEventListener('submit', async function(e){
     const messages = [
         {
             role:"system",
-            content:`You are an expert professional translator and localization specialist.
-                    Translate the following text from English to ${checkedRadio.value}. 
-Requirements:
-
-- Preserve the original meaning, intent, and context exactly.
-
-- Use natural, fluent, native-level language.
-
-- Maintain the original tone, style, and emotional nuance.
-
-- Adapt idioms, expressions, and cultural references appropriately for native speakers.
-
-- Preserve formatting, paragraphs, lists, punctuation, and structure.
-
-- Do not add, omit, or interpret information beyond what is written.
-
-- If a phrase has multiple possible meanings, choose the most contextually appropriate translation.
-
-- For technical, legal, medical, or business terms, use standard professional terminology.
-
-- If there is ambiguity, provide the best translation and briefly note the alternative meaning.`
+            content:`You are a professional translation assistant. Translate the user's text into the requested ${checkedRadio.value} language while preserving meaning, tone, context, formatting, and style. Do not add explanations, comments, or extra text. Return only the translated content.`
         },
         {
             role: "user",
@@ -53,7 +33,7 @@ Requirements:
         try {
             
             const response = await openai.chat.completions.create({
-                model: "openai/gpt-oss-20b", 
+                model: "gpt-5.4-nano", 
                 messages: messages 
             })
 
@@ -72,15 +52,17 @@ Requirements:
 
 function render(message){
     return `<h2>Your translation</h2>
-            <div class="translated">${message}</div>
-            `
+    <textarea disabled class="translated">${message}</textarea>
+        `
 }
 
 document.querySelector('form').addEventListener('reset', function(e){
     e.preventDefault()
-
+    
     selectLanguage.style.display='block'
           submitEl.style.display='block'
           resetEl.style.display='none'
           translatedText.style.display='none'
+
+          location.reload()
 })
