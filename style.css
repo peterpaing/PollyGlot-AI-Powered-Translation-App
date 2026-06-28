@@ -76,18 +76,20 @@ form h2{
     text-align: center;
     color: #035A9D;
 }
-
+#input-text{
+ padding: 12px 5px 76px 10px;
+}
 #input-text,.translated{
     resize: none;
     width: 81.28%;
     border: none;
     border-radius: 8px;
     background-color: #EFF0F4;
-    padding: 12px 5px 76px 10px;
     margin: auto;
 }
 .translated{
-    margin-left: 32px;
+    padding: 12px 5px 85px 10px;
+     display: flex;
     color:#000;
     font-size: 18px;
     font-family: 'Poppins', sans-serif;
@@ -144,6 +146,35 @@ input[type="radio"]{
 
 .reset-btn{
     display: none;
+}
+
+@media (min-width: 1024px) {
+    header{
+        height: 15%;
+        gap:50px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    header img{
+        width: 80px;
+        height:80px;
+    }
+    form{
+        margin-top: 20px;
+    }
+
+    .raido-label{
+        margin-left: 110px;
+    }
+
+    #input-text{
+        padding: 12px 5px 55px 10px;
+    }
+
+    .translated{
+       padding: 12px 5px 85px 10px; 
+    }
 }
 
 
